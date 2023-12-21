@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <title>Profile</title>
     <style>
-        /* Add CSS styles here to match the design of your userview.html */
+
         body {
             font-family: 'Arial', sans-serif;
             background-color: #1a202c;
@@ -19,7 +19,7 @@
 
 
         .profile {
-            /* Styles similar to your userview.html */
+
             width: 90%;
             background-color: #2d3748;
             border-radius: 8px;
@@ -56,49 +56,49 @@
             display: inline-block;
             margin-top: 20px;
             padding: 10px 20px;
-            background-color: #3182ce; /* Button color */
-            color: white; /* Text color */
-            text-decoration: none; /* Remove underline from link */
+            background-color: #3182ce;
+            color: white;
+            text-decoration: none;
             border-radius: 4px;
             cursor: pointer;
             transition: background-color 0.3s;
         }
 
         .backButton:hover {
-            background-color: #63b3ed; /* Color on hover */
+            background-color: #63b3ed;
         }
     </style>
 </head>
 <body>
-    <div class="profile">
-        <div class="profileTitleContainer">
-            <h1 class="profileTitle">Profile</h1>
-        </div>
-        <div class="profileContainer">
-            <div class="profileShow">
-                <div class="profileTop">
-                    <img src="../static/will.png"
-                         alt=""
-                         class="profileImage"/>
-                    <div class="profileTopTitle">
-                        <span class="profileName">Will H.</span>
-                        <span class="profileTitle">Sales Rep.</span>
-                    </div>
+<div class="profile">
+    <div class="profileTitleContainer">
+        <h1 class="profileTitle">Profile</h1>
+    </div>
+    <div class="profileContainer">
+        <div class="profileShow">
+            <div class="profileTop">
+                <img src="../static/will.png"
+                     alt=""
+                     class="profileImage"/>
+                <div class="profileTopTitle">
+                    <span class="profileName">Will H.</span>
+                    <span class="profileTitle">Sales Rep.</span>
                 </div>
-                <div class="profileBottom">
-                    <span class="profileBottomTitle">Account Details</span>
-                    <div class="profileInfo">
-                        <span class="profileInfoIcons">📞</span>
-                        <span class="profileInfoContent">(122) 333-4444</span>
-                    </div>
-                    <div class="profileInfo">
-                        <span class="profileInfoIcons">📧</span>
-                        <span class="profileInfoContent">testing123@gmail.com</span>
-                    </div>
+            </div>
+            <div class="profileBottom">
+                <span class="profileBottomTitle">Account Details</span>
+                <div class="profileInfo">
+                    <span class="profileInfoIcons">📞</span>
+                    <span class="profileInfoContent">(122) 333-4444</span>
+                </div>
+                <div class="profileInfo">
+                    <span class="profileInfoIcons">📧</span>
+                    <span class="profileInfoContent">testing123@gmail.com</span>
                 </div>
             </div>
         </div>
-        <a href="/user-view" class="backButton">Back to User View</a>
     </div>
+    <a href="/user-view" class="backButton">Back to User View</a>
+</div>
 </body>
 </html>

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Sign Up</title>
-        <style>
+    <style>
         body {
             font-family: Arial, sans-serif;
             background-color: #1a202c;
@@ -15,6 +15,7 @@
             align-items: center;
             justify-content: center;
         }
+
         form {
             display: flex;
             flex-direction: column;
@@ -22,7 +23,7 @@
         }
 
         input, button {
-            width: 80%; /* Adjust width as needed */
+            width: 80%;
             margin: 0.5em 0;
         }
 
@@ -67,42 +68,42 @@
     </style>
 </head>
 <body>
-    <div class="form-container">
-        <h2>Sign Up</h2>
-        <form id="signUpForm" onsubmit="signup(event)">
-            <input type="text" id="name" placeholder="Name" required>
-            <input type="number" id="age" placeholder="Age" required>
-            <input type="email" id="email" placeholder="Email" required>
-            <input type="password" id="password" placeholder="Password" required>
-            <button type="submit">Sign Up</button>
-        </form>
-        <p>Already have an account? <a href="/sign-in">Sign in</a></p>
-    </div>
+<div class="form-container">
+    <h2>Sign Up</h2>
+    <form id="signUpForm" onsubmit="signup(event)">
+        <input type="text" id="name" placeholder="Name" required>
+        <input type="number" id="age" placeholder="Age" required>
+        <input type="email" id="email" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Sign Up</button>
+    </form>
+    <p>Already have an account? <a href="/sign-in">Sign in</a></p>
+</div>
 
-    <script>
-        function signup(event) {
-            event.preventDefault();
-            const name = document.getElementById('name').value;
-            const age = document.getElementById('age').value;
-            const email = document.getElementById('email').value;
-            const password = document.getElementById('password').value;
+<script>
+    function signup(event) {
+        event.preventDefault();
+        const name = document.getElementById('name').value;
+        const age = document.getElementById('age').value;
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
 
-            fetch('http://127.0.0.1:5000/signup', {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json',
-                },
-                body: JSON.stringify({ email, password, name, age }),
-            })
+        fetch('http://127.0.0.1:5000/signup', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({email, password, name, age}),
+        })
             .then(response => response.json())
             .then(data => {
                 alert(data.message);
                 if (data.message) {
-                    window.location.href = '/user-view'; // Redirect to sign-in page
+                    window.location.href = '/user-view';
                 }
             })
             .catch(error => console.error('Error:', error));
-        }
-    </script>
+    }
+</script>
 </body>
 </html>

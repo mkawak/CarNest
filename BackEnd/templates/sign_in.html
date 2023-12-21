@@ -15,6 +15,7 @@
             align-items: center;
             justify-content: center;
         }
+
         form {
             display: flex;
             flex-direction: column;
@@ -22,7 +23,7 @@
         }
 
         input, button {
-            width: 80%; /* Adjust width as needed */
+            width: 80%;
             margin: 0.5em 0;
         }
 
@@ -93,10 +94,10 @@
             .then(response => response.json())
             .then(data => {
                 if (data.message) {
-                    localStorage.setItem('userName', data.name); // Save user role
-                    localStorage.setItem('userEmail', email);   // Save user email
-                    localStorage.setItem('userRole', data.role); // Save user role
-                    window.location.href = '/user-view';    // Redirect to user account page
+                    localStorage.setItem('userName', data.name);
+                    localStorage.setItem('userEmail', email);
+                    localStorage.setItem('userRole', data.role);
+                    window.location.href = '/user-view';
                 } else {
                     alert(data.error);
                 }

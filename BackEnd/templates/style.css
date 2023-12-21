@@ -67,7 +67,7 @@ a:hover {
     text-decoration: underline;
 }
 
-/* Responsive adjustments */
+
 @media (max-width: 768px) {
     .form-container {
         width: 90%;
@@ -79,7 +79,7 @@ a:hover {
     }
 }
 
-/* Pictures */
+
 .modal {
     display: none;
     position: fixed;

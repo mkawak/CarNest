@@ -9,11 +9,6 @@ from bson.json_util import dumps
 from bson.objectid import ObjectId
 import subprocess
 
-# import json
-# from functools import wraps
-# import pandas as pd
-# import requests
-# import psycopg2
 
 # Start Mongodb
 subprocess.Popen(["/Users/majd/PycharmProjects/CarNest/BackEnd/start_mongodb.sh"])
